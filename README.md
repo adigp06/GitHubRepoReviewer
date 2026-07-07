@@ -1,15 +1,15 @@
-# 🤖 Autonomous GitHub Repository Architecture Reviewer
+#  Autonomous GitHub Repository Architecture Reviewer
 
 An intelligent multi-agent pipeline designed to analyze public GitHub repositories. By connecting to the remote GitHub API, this system inspects directory structures, cleans noise, and chunks files to respect context limits, running multiple isolated agents in parallel to deliver a structured engineering report.
 
 ---
 
-## 🎯 Project Objective
+##  Project Objective
 To build an automated code review system that converts a raw, remote GitHub repository into clean, AI-readable context. The goal is to evaluate codebases across quality of architecture, documentation, testing, code quality, and dependencies without exceeding LLM context windows or incurring heavy network and storage overhead.
 
 ---
 
-## 🏗️ Approach & Methodology
+##  Approach & Methodology
 
 ### 1. URL Parser & Virtual Indexer (`url_parser.py`, `indexer.py`)
 * **How it works:** The system extracts the repository owner and name from a public URL and queries GitHub's `git/trees` API recursively.
@@ -37,7 +37,7 @@ To build an automated code review system that converts a raw, remote GitHub repo
 
 ---
 
-## ⚠️ Assumptions, Limitations & Observations
+##  Assumptions, Limitations & Observations
 
 ### Assumptions
 * **Main Branch Default:** The indexer assumes the core codebase resides in the default `main` branch when making recursive tree calls. 
